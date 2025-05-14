@@ -1,5 +1,5 @@
 import { defineConfig } from 'vitepress'
-const base = "/blog/"; 
+const base = "/my-blog/"; 
 export default defineConfig({
   base,
   title: '我的博客',
