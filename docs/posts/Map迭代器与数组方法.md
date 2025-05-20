@@ -1,9 +1,8 @@
-
 # Map迭代器与数组方法的兼容性问题
 
 ## 问题背景
 
-**在前端开发中，我们经常使用ES6的** `<span class="ne-text">Map</span>`对象存储键值对数据。某天我遇到一个诡异的问题：使用 `<span class="ne-text">a.keys().forEach(...)</span>`遍历Map的键时，新版Chrome运行正常，而老版本浏览器却抛出 `<span class="ne-text">TypeError: a.keys(...).forEach is not a function</span>`错误。
+**在前端开发中，我们经常使用ES6的** `Map`对象存储键值对数据。某天我遇到一个诡异的问题：使用 `a.keys().forEach(...)`遍历Map的键时，新版Chrome运行正常，而老版本浏览器却抛出 `TypeError: a.keys(...).forEach is not a function`错误。
 
 ## 问题定位
 
@@ -45,7 +44,7 @@ Array.from(map.keys()).forEach(handleKey)
 ## 最佳实践
 
 1. **明确方法返回值类型，查阅**[MDN文档](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Map/keys)
-3. **需要数组方法时主动转换类型**
+2. **需要数组方法时主动转换类型**
 
 ## 总结
 
