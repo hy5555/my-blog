@@ -7,19 +7,24 @@ export default defineConfig({
   themeConfig: {
     nav: [
       { text: '首页', link: '/' },
+      { text: 'JS', link: '/posts/Map迭代器与数组方法' },
       { text: '文章', link: '/posts/first-post' }
     ],
     sidebar: [
       {
-        text: '文章',
-        items: []
+        text: 'JS',
+        collapsible: true,
+        collapsed: true,
+        items: [
+          { text: 'Map迭代器与数组方法踩坑', link: '/posts/Map迭代器与数组方法' }
+        ]
       },
       {
         text: '搭建',
         collapsible: true,
         collapsed: true,
         items: [
-          { text: '第一篇文章', link: '/posts/first-post' }
+          { text: '使用vitepress搭建博客并部署到github', link: '/posts/first-post' }
         ]
       }
     ]
